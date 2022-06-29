@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: David RF <davidrod@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 13:07:52 by David RF          #+#    #+#             */
-/*   Updated: 2022/06/22 00:38:24 by David RF         ###   ########.fr       */
+/*   Created: 2022/06/28 12:51:07 by David RF          #+#    #+#             */
+/*   Updated: 2022/06/28 12:51:08 by David RF         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*ft_strjoin(char **str, char *buffer, size_t n)
 {

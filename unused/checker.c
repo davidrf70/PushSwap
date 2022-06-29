@@ -1,5 +1,4 @@
 #include "push_swap.h"
-#include <stdio.h>
 
 void	hf_process_cmd(char *cmd, t_stack *a, t_stack *b)
 {
@@ -53,7 +52,7 @@ void	hf_read_do_actions(t_stack *a, t_stack *b)
 
 	while (1)
 	{
-		cmd = get_next_line(STDIN_FILENO);
+		cmd = ft_get_next_line(STDIN_FILENO);
 		if (!cmd)
 			break ;
 		hf_search_eol(cmd);

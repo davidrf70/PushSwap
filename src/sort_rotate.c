@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   sort_rotate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: David RF <davidrod@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 20:44:19 by David RF          #+#    #+#             */
-/*   Updated: 2022/06/22 00:40:53 by David RF         ###   ########.fr       */
+/*   Created: 2022/06/28 12:52:08 by David RF          #+#    #+#             */
+/*   Updated: 2022/06/28 13:50:46 by David RF         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "push_swap.h"
 
-# define	BUFFER_SIZE		1024
+void	hf_rotate(t_stack *stack)
+{
+	int	tmp;
+	int	i;
 
-//# include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft.h"
+	if (stack->top < 1)
+		return ;
+	tmp = stack->vector[stack->top];
+	i = stack->top;
+	while (i > 0)
+	{
+		stack->vector[i] = stack->vector[i - 1];
+		i--;
+	}
+	stack->vector[i] = tmp;
+}
 
-void	free_resources(char **str);
-char	*get_next_line(int fd);
-char	*ft_strjoin(char **str, char *buffer, size_t n);
+void	ra(t_stack *a)
+{
+	hf_rotate(a);
+}
 
-#endif
+void	rb(t_stack *b)
+{
+	hf_rotate(b);
+}
+
+void	rr(t_stack *a, t_stack *b)
+{
+	hf_rotate(a);
+	hf_rotate(b);
+}

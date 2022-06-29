@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: David RF <davidrod@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 12:40:26 by David RF          #+#    #+#             */
-/*   Updated: 2022/05/26 22:18:09 by David RF         ###   ########.fr       */
+/*   Created: 2022/06/28 12:50:35 by David RF          #+#    #+#             */
+/*   Updated: 2022/06/28 12:50:36 by David RF         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 void	free_resources(char **str)
 {
@@ -104,7 +104,7 @@ char	*search_line(int fd, char *str, char *buffer, char **tail)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char	*ft_get_next_line(int fd)
 {
 	char		*buffer;
 	char		*line;

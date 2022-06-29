@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: David RF <davidrod@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 12:50:21 by David RF          #+#    #+#             */
+/*   Updated: 2022/06/28 12:50:21 by David RF         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include	"libft.h"
 
 static size_t	hf_skip_spaces(const char *nptr)
@@ -39,7 +51,7 @@ static int	hf_get_mod(const char *nptr, size_t i)
 	return (mod);
 }
 
-int		ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	size_t	i;
 	int		sign;
@@ -48,7 +60,6 @@ int		ft_atoi(const char *nptr)
 	i = hf_skip_spaces(nptr);
 	sign = 1;
 	sign = hf_get_sign(nptr, &i);
-	
 	if (nptr[i] == '-' || nptr[i] == '+')
 		return (0);
 	mod = hf_get_mod(nptr, i);
